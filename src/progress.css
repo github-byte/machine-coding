@@ -1,0 +1,12 @@
+.progress{
+    width: 100px;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+    /* background-color: red; */
+}
+
+.runner{
+    position: absolute;
+    background-color: green;
+}

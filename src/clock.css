@@ -1,0 +1,21 @@
+.minute{
+    animation: rotate infinite timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(10%);
+    }
+    25%{
+        transform: rotate(20%);
+    }
+    50%{
+        transform: rotate(50%);
+    }
+    75%{
+        transform: rotate(75%);
+    }
+    100%{
+        transform: rotate(100%);
+    }
+}

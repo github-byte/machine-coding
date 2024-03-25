@@ -1,12 +1,29 @@
 .progress{
-    width: 100px;
+    width: 90vw;
     height: 20px;
     border-radius: 20px;
     position: relative;
+    overflow: hidden;
+    background-color: lightgray;
+    border-radius: 8px;
     /* background-color: red; */
 }
 
 .runner{
     position: absolute;
-    background-color: green;
+    /* background-image: linear-gradient(to right,green, yellow, green); */
+    animation-name: runnerAnimation;
+    animation-duration: 10s;
+}
+
+@keyframes runnerAnimation {
+        0% {
+            background-color: green;
+        }
+        50% {
+            background-color: yellow;
+        }
+        100% {
+            background-color: green;
+        }
 }

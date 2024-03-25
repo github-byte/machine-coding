@@ -1,22 +1,27 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './progress.css'
 
 const ProgressBar = (props) => {
     const [value, setValue] = useState(0);
+    const intervalRef = useRef(null);
+    
     useEffect(() => {
-        console.log('in val',value);
-        const id = setInterval(() => {
+        intervalRef.current = setInterval(() => {
             setValue((val) => val + 1)
         }, 100);
-        if(value == 100){
-            clearInterval(id)
+    }, [])
+    useEffect(() => {
+        if (value === 100) {
+            clearInterval(intervalRef.current)
         }
-    },[])
-    return (
+    }, [value])
+    return (<div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className='progress'>
-            {value}%
-            <span className='runner'></span>
+            {/* {value}% */}
+            <span style={{ width: `calc(${value}*90vw/100)`, height: 'inherit', backgroundColor: 'green' }} className='runner'></span>
         </div>
+        {value}%
+    </div>
     )
 
 }

@@ -3,7 +3,7 @@ import './App.css';
 import ProgressBar from './progress';
 import InfiniteScroll from './infiniteScroll';
 import Search from './search';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Table,
   TableBody,
@@ -13,16 +13,20 @@ import {
   TableRow,
   Paper,
 } from '@mui/material';
+import { Stepper } from './stepper';
+import Otp from './react-otp';
+import ShowText from './showText';
+import ShowDiv from './showDiv';
+import WallClock from './clock';
+import AutoCompleteInput from './autoComplete';
+import MultiSearchInput from './multi-search';
 
 function App() {
-  const parentData = [
-    { parentName: 'Parent 1', children: [{ childName: 'Child 1.1' }, { childName: 'Child 1.2' }] },
-    { parentName: 'Parent 2', children: [{ childName: 'Child 2.1' }, { childName: 'Child 2.2' }] },
-    { parentName: 'Parent 3', children: [{ childName: 'Child 2.1' }, { childName: 'Child 2.2' }] },
-  ];
-
-  return (
-    <TableContainer component={Paper}>
+  const MainContext = React.createContext();
+  const [text, setText] = useState('');
+  const textVal = {}
+  return (<>
+    {/* <TableContainer component={Paper}>
       <Table>
         <TableHead>
           <TableRow>
@@ -51,6 +55,13 @@ function App() {
         </TableBody>
       </Table>
     </TableContainer>
+    <Search /> */}
+    {/* <WallClock/> */}
+    {/* <Stepper />
+    <ProgressBar />
+    <Otp/> */}
+    <MultiSearchInput />
+  </>
   );
 }
 

@@ -20,6 +20,7 @@ import ShowDiv from './showDiv';
 import WallClock from './clock';
 import AutoCompleteInput from './autoComplete';
 import MultiSearchInput from './multi-search';
+import Carousel from './carousel';
 
 function App() {
   const MainContext = React.createContext();
@@ -61,6 +62,7 @@ function App() {
     <ProgressBar />
     <Otp/> */}
     <MultiSearchInput />
+    <Carousel/>
   </>
   );
 }

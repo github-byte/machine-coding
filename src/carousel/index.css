@@ -1,0 +1,33 @@
+.carousel-parent{
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-img{
+    height: 300px;
+    width: 300px;
+    transition: 2s all;
+    transition-timing-function: ease-out;
+}
+
+.left-pointer{
+    position: absolute;
+    top: 35%;
+    left: 0px;
+}
+
+.right-pointer{
+    position: absolute;
+    right: 0px;
+    top: 35%;
+}
+
+.carousel-main{
+    width: 30vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative
+}

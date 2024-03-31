@@ -83,7 +83,7 @@ const MultiSearchInput = (props) => {
                         return (<Pills removeUser={removeUser} user={item} />)
                     })}
                 </div>
-                <div >
+                <div className='input-div'>
                     <input ref={inputRef} onKeyDown={handleKey} type='text' placeholder='Search Any value' value={search} onChange={handleSearch} />
                 </div>
             </div>
